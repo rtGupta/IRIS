@@ -1,0 +1,230 @@
+.emergencyForm {
+  position: relative;
+  width: 50%;
+  margin: 20px;
+}
+
+.form-card {
+  @include flex-display(column, center, normal);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  background-color: $color-white;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.add-task {
+  @extend .form-card;
+  @extend .form-components;
+  // background-color: rgba(0, 0, 0, 70%);
+  // color: $color-white;
+}
+
+.form-components {
+  h2 {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-weight: bold;
+    margin-top: 0px;
+  }
+
+  input {
+    padding: 10px;
+    border: 1px solid $color-input-border;
+    border-radius: 5px;
+    margin: 10px 0px;
+  }
+
+  .drop-dwn {
+    padding: 10px;
+    border: 1px solid $color-input-border;
+    border-radius: 5px;
+    margin: 10px 0px;
+    height: auto;
+    width: 184px;
+  }
+
+  textarea {
+    padding: 10px;
+    border: 1px solid $color-input-border;
+    border-radius: 5px;
+    margin: 10px 0px;
+    height: 100px;
+  }
+
+  .radio-group {
+    @include flex-display(row, space-evenly, center);
+  }
+
+  .form-control {
+    @include flex-display(row, space-between, center);
+
+    margin: 0px 5px 5px 0px;
+  }
+
+  .hospital-control {
+    display: contents;
+  }
+
+  button {
+    cursor: pointer;
+    border: 1px solid $color-black;
+    border-radius: 5px;
+    background-color: $color-black;
+    color: $color-white;
+    padding: 10px;
+    margin: 0px 10px 0px 0px;
+    width: 100%;
+
+    &:disabled {
+      border: 1px solid rgba($color: $color-black, $alpha: 0.1);
+      background-color: rgba($color: $color-black, $alpha: 0.67);
+      color: $color-input-border;
+    }
+  }
+
+  .add-button-group {
+    @include flex-display(row, space-between, normal);
+    padding: 10px;
+  }
+}
+
+.loginContainer {
+  @include flex-display(row, center, center);
+  background-image: url("../../public/assets/background_1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 694px;
+}
+
+.loginFormContainer {
+  @extend .form-card;
+  background-color: rgba(0, 0, 0, 70%);
+  width: 20%;
+  padding: 40px;
+  color: $color-white;
+
+  .loginTitle {
+    @include flex-display(column, normal, center);
+  }
+
+  img {
+    display: flex;
+    border-radius: 50%;
+    width: 30%;
+    height: auto;
+  }
+
+  i {
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  button {
+    padding: 15px;
+    background-color: #493883;
+    border: 1px solid #493883;
+  }
+}
+
+.loginForm {
+  @include flex-display(column, normal, normal);
+
+  @extend .form-components;
+
+  input {
+    padding: 15px;
+  }
+}
+
+.signUpContainer {
+  @include flex-display(column, normal, normal);
+  img {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    margin-top: 140px;
+  }
+}
+
+.signUpFormContainer {
+  @include flex-display(column, center, center);
+  @extend .form-components;
+  margin-left: 700px;
+  margin-top: 100px;
+  align-content: center;
+}
+
+.signUpForm {
+  @include flex-display(column, normal, normal);
+  @extend .form-components;
+}
+
+.errormsg {
+  margin: 0;
+  font-size: 11px;
+  color: red;
+}
+
+.medicalHistoryContainer {
+  @include flex-display(column, center, center);
+  padding: 20px;
+
+  img {
+    width: 50%;
+    height: auto;
+    position: absolute;
+  }
+}
+
+.medical-History-Form {
+  @include flex-display(column, center, normal);
+  @extend .form-card;
+  @extend .form-components;
+
+  width: 70%;
+
+  .form-control {
+    @include flex-display(column, space-between, normal);
+    margin: 0px 10px 10px 0px;
+  }
+
+  label {
+    margin-right: 5px;
+  }
+
+  .form-section {
+    @include flex-display(column, normal, flex-start);
+
+    .section-control {
+      @include flex-display(row, center, center);
+
+      input[type="checkbox"] {
+        margin: 8px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .iris-eligible {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .btn-check-vitals {
+    width: auto;
+    margin-top: 20px;
+  }
+}
+
+.changePasswordContainer {
+  @include flex-display(row, center, center);
+}
+
+.changePasswordForm {
+  @extend .form-card;
+  width: 20%;
+  margin-top: 2%;
+}

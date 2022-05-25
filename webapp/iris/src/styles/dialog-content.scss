@@ -1,0 +1,16 @@
+.card-row {
+    @include flex-display(row, space-between, center);
+
+    img {
+        width: 20%;
+        height: auto;
+    }
+
+    h4 {
+        // background-color: lime;
+        padding: 10px;
+        border-radius: 50%;
+        width: 25%;
+        text-align: center;
+    }
+}

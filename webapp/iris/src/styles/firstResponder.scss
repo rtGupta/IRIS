@@ -1,0 +1,41 @@
+.firstResponderContainer {
+  @include flex-display(column, center, normal);
+
+  .historyFRTable {
+    @include flex-display(row, center, normal);
+
+    .callHistory {
+      padding: 0px 20px;
+      width: 100%;
+    }
+
+    .data-grid-container {
+      width: 100%;
+      height: 300px;
+
+      .MuiDataGrid-cell--textLeft {
+        justify-content: center;
+      }
+
+      .MuiDataGrid-columnHeaderTitleContainer {
+        justify-content: center;
+      }
+
+      .MuiDataGrid-root .MuiDataGrid-cell:focus-within {
+        outline: none !important;
+      }
+      
+      .MuiDataGrid-row {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.form-map-container {
+  @include flex-display(row, space-between, normal);
+
+  .map {
+    height: 100%;
+  }
+}

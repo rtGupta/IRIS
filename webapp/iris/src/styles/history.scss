@@ -1,0 +1,44 @@
+.historyTable {
+  @include flex-display(row, center, normal);
+
+  .callHistory {
+    width: 70%;
+  }
+
+  .data-grid-container {
+    width: 100%;
+    height: 400px;
+
+    .MuiDataGrid-cell--textLeft {
+      justify-content: center;
+    }
+
+    .MuiDataGrid-columnHeaderTitleContainer {
+      justify-content: center;
+    }
+
+    .MuiDataGrid-root .MuiDataGrid-cell:focus-within {
+      outline: none !important;
+    }
+  }
+}
+
+.hospital-history {
+  @include flex-display(column, center, center);
+
+  .historyTable {
+    width: 100%;
+    margin-bottom: 10px;
+    position: static;
+  }
+}
+
+.history-action {
+  cursor: pointer;
+  border: 1px solid $color-black;
+  border-radius: 5px;
+  background-color: $color-black;
+  color: white;
+  padding: 10px;
+  margin: 0px 10px 0px 0px;
+}
