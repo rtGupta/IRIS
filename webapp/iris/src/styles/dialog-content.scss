@@ -1,16 +1,62 @@
-.card-row {
-    @include flex-display(row, space-between, center);
+.MuiPaper-root {
+  background-color: rgba(17, 17, 17, 255) !important;
+}
+
+#customized-dialog-title {
+  color: rgba(169, 143, 95, 255);
+}
+
+.card-content {
+  h3 {
+    margin: 0px;
+    color: rgba(169, 143, 95, 255);
+  }
+}
+
+.vitals-card {
+  @include flex-display(row, space-evenly, center);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to right, #111111, #1e1e1f);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  color:rgba(169, 143, 95, 255);
+
+  .vitals-icon {
+    width: 5%;
+    background-image: linear-gradient(to top right, #080909 25%, #4f4f4f);
+    border-radius: 50%;
+    padding: 15px;
 
     img {
-        width: 20%;
-        height: auto;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .vitals-card-content {
+    width: 80%;
+    align-items: center;
+    h4 {
+      margin: 0px 0px 5px 0px;
     }
 
-    h4 {
-        // background-color: lime;
-        padding: 10px;
-        border-radius: 50%;
-        width: 25%;
-        text-align: center;
+    .vitals-value {
+        @include flex-display(row, normal, center);
     }
+    .value {
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .unit {
+        margin-left: 15px;
+        color: #848484;
+    }
+  }
+}
+
+.btn-ok {
+    color: rgba(169, 143, 95, 255) !important;
 }

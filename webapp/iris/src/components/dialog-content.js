@@ -73,52 +73,74 @@ export default function CustomizedDialogs(props) {
           id="customized-dialog-title"
           onClose={handleClose}
         >
-          Caller Vitals
+          <strong>Caller Vitals</strong>
         </BootstrapDialogTitle>
         <DialogContent dividers>
           <div className="card-content">
             <h3>Name: {props.content.name}</h3>
-            <div className="card-row">
-              <div>
-                <h4>Blood Group</h4>
-                <p>{props.content.bloodGroup}</p>
+            <div className="vitals-card">
+              <div className="vitals-icon">
+                <img src="../assets/bp.png" />
               </div>
-              <div>
-                <h4>Height</h4>
-                <p>{props.content.height}</p>
-              </div>
-              <div>
-                <h4>Weight</h4>
-                <p>{props.content.weight}</p>
+              <div className="vitals-card-content">
+                <h4>Blood Pressure</h4>
+                <div className="vitals-value">
+                  <span className="value">
+                    {props.content.vitals?.diastolic}/
+                    {props.content.vitals?.systolic}
+                  </span>
+                  <span className="unit">mm/Hg</span>
+                </div>
               </div>
             </div>
-            <h3>Caller Vitals</h3>
-            <div>
-              <div className="card-row">
-                <img src="../assets/O2.jpg" alt="oxy-level" />
-                <h1>{props.content.vitals?.oxygenLevel}</h1>
-                <h4>Oxygen Level</h4>
+            <div className="vitals-card">
+              <div className="vitals-icon">
+                <img src="../assets/temp.png" />
               </div>
-              <div className="card-row">
-                <img src="../assets/body-temp.jpg" alt="body-temp" />
-                <h1>{props.content.vitals?.temperature}</h1>
-                <h4>Temperature</h4>
+              <div className="vitals-card-content">
+                <h4>Body Temperature</h4>
+                <div className="vitals-value">
+                  <span className="value">
+                    {props.content.vitals?.temperature}
+                  </span>
+                  <span className="unit">Degree</span>
+                </div>
               </div>
-              <div className="card-row">
-                <img src="../assets/heart-rate.jpg" alt="heart-rate" />
-                <h1>{props.content.vitals?.heartRate}</h1>
+            </div>
+            <div className="vitals-card">
+              <div className="vitals-icon">
+                <img src="../assets/heart-rate.png" />
+              </div>
+              <div className="vitals-card-content">
                 <h4>Heart Rate</h4>
+                <div className="vitals-value">
+                  <span className="value">
+                    {props.content.vitals?.heartRate}
+                  </span>
+                  <span className="unit">bpm</span>
+                </div>
               </div>
-              <div className="card-row">
-                <img src="../assets/bp.jpg" alt="BP" />
-                <h1>{props.content.vitals?.diastolic}/{props.content.vitals?.systolic}</h1>
-                <h4>Blood Pressure</h4>
+            </div>
+            <div className="vitals-card">
+              <div className="vitals-icon">
+                <img src="../assets/oxygen.png" />
+              </div>
+              <div className="vitals-card-content">
+                <h4>
+                  SpO<sub>2</sub>
+                </h4>
+                <div className="vitals-value">
+                  <span className="value">
+                    {props.content.vitals?.oxygenLevel}
+                  </span>
+                  <span className="unit">%</span>
+                </div>
               </div>
             </div>
           </div>
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleClose}>
+          <Button autoFocus onClick={handleClose} className="btn-ok">
             OK
           </Button>
         </DialogActions>
